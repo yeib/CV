@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Francisco Fuentealba (Yeib) | Desarrollador Full-Stack">
+    <meta property="og:description" content="Especialista en Rust + Tauri v2, Laravel Octane y plataformas SaaS con IA. 8 aplicaciones oficiales en Microsoft Store.">
+    <meta property="og:image" content="https://cv.yeib.cl/assets/og-preview.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>CV - Francisco Fuentealba Chomalí (Yeib)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="css/style.css?v=3">
+    
+    <script src="js/data.js?v=3"></script>
+    <script src="js/app.js?v=3"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="cvApp()" class="text-slate-300 antialiased min-h-screen py-12 px-4 sm:px-6 lg:px-8 relative overflow-x-hidden">
+    
+    <!-- Language Toggle -->
+    <div class="absolute top-6 right-6 md:top-8 md:right-8 z-50 flex gap-1 p-1 bg-dark-card/80 backdrop-blur-md rounded-lg border border-dark-border shadow-lg">
+        <button @click="setLang('es')" :class="lang === 'es' ? 'bg-brand-DEFAULT/20 border border-brand-DEFAULT/40 text-brand-light shadow-sm' : 'text-slate-500 hover:text-slate-300 hover:bg-slate-800 border border-transparent'" class="px-3 py-1.5 rounded-md text-xs font-bold transition-colors">ES</button>
+        <button @click="setLang('en')" :class="lang === 'en' ? 'bg-brand-DEFAULT/20 border border-brand-DEFAULT/40 text-brand-light shadow-sm' : 'text-slate-500 hover:text-slate-300 hover:bg-slate-800 border border-transparent'" class="px-3 py-1.5 rounded-md text-xs font-bold transition-colors">EN</button>
+    </div>
+
+    <!-- Nebula Ambient Background -->
+    <div class="orb-teal"></div>
+    <div class="orb-purple"></div>
+
+    <div class="max-w-5xl mx-auto">
+        <div class="glass-panel rounded-[2rem] border border-dark-border overflow-hidden relative">
+            
+            <!-- Hero / Profile -->
+            <div class="px-8 pt-12 pb-10 border-b border-dark-border relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-light via-brand-neon to-purple-500"></div>
+                
+                <div class="flex flex-col-reverse md:flex-row items-center md:items-start md:justify-between gap-8 relative z-10">
+                    <div class="text-center md:text-left flex-1">
+                        <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight">
+                            Francisco <br class="hidden md:block">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-light to-emerald-400 glow-text">Fuentealba</span>
+                            <span class="text-brand-DEFAULT/80 text-3xl md:text-5xl ml-1 font-medium tracking-normal">(Yeib)</span>
+                        </h1>
+                        <h2 class="text-xl md:text-2xl text-brand-neon mt-3 font-semibold tracking-wide uppercase flex items-center justify-center md:justify-start gap-3">
+                            <i class="fa-solid fa-code text-brand-DEFAULT"></i> <span x-text="data().header.role"></span>
+                        </h2>
+                        <p class="mt-4 text-slate-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto md:mx-0 font-light" x-text="data().header.bio"></p>
+                    </div>
+                    
+                    <img src="assets/logoYY.webp" alt="Yeib Logo" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full border-2 border-brand-DEFAULT/30 shadow-[0_0_30px_rgba(20,184,166,0.3)]">
+                </div>
+
+                <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-3 text-sm">
+                    <a :href="data().header.pdfLink" download class="group flex items-center gap-3 px-5 py-2.5 bg-brand-DEFAULT hover:bg-brand-light text-white font-bold rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(20,184,166,0.4)] hover:shadow-[0_0_30px_rgba(45,212,191,0.6)] hover:-translate-y-1 w-full md:w-auto justify-center mb-2 md:mb-0">
+                        <i class="fa-solid fa-file-pdf text-lg"></i>
+                        <span x-text="data().header.pdfBtn"></span>
+                    </a>
+                    <div class="w-full h-0"></div>
+                    <a href="mailto:yeib@pm.me" class="group flex items-center gap-3 px-4 py-2.5 bg-dark-surface hover:bg-slate-800 border border-dark-border rounded-xl transition-all duration-300 hover:border-[#8b5cf6] hover:shadow-[0_0_15px_rgba(139,92,246,0.25)]">
+                        <i class="fa-solid fa-envelope w-5 text-brand-DEFAULT group-hover:text-[#8b5cf6] transition-colors"></i> 
+                        <span class="text-slate-300 group-hover:text-white transition-colors">yeib@pm.me</span>
+                    </a>
+                    <a href="https://yeib.cl" target="_blank" class="group flex items-center gap-3 px-4 py-2.5 bg-dark-surface hover:bg-slate-800 border border-dark-border rounded-xl transition-all duration-300 hover:border-[#14b8a6] hover:shadow-[0_0_15px_rgba(20,184,166,0.25)]">
+                        <i class="fa-solid fa-globe w-5 text-brand-DEFAULT group-hover:text-[#14b8a6] transition-colors"></i> 
+                        <span class="text-slate-300 group-hover:text-white transition-colors">yeib.cl</span>
+                    </a>
+                    <a href="https://g.dev/yeib" target="_blank" class="group flex items-center gap-3 px-4 py-2.5 bg-dark-surface hover:bg-slate-800 border border-dark-border rounded-xl transition-all duration-300 hover:border-[#4285F4] hover:shadow-[0_0_15px_rgba(66,133,244,0.25)]">
+                        <i class="fa-brands fa-google w-5 text-brand-DEFAULT group-hover:text-[#4285F4] transition-colors"></i> 
+                        <span class="text-slate-300 group-hover:text-white transition-colors">g.dev/yeib</span>
+                    </a>
+                    <a href="https://github.com/yeib" target="_blank" class="group flex items-center gap-3 px-4 py-2.5 bg-dark-surface hover:bg-slate-800 border border-dark-border rounded-xl transition-all duration-300 hover:border-[#e2e8f0] hover:shadow-[0_0_15px_rgba(226,232,240,0.15)]">
+                        <i class="fa-brands fa-github w-5 text-brand-DEFAULT group-hover:text-[#e2e8f0] transition-colors"></i> 
+                        <span class="text-slate-300 group-hover:text-white transition-colors">GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/yeib" target="_blank" class="group flex items-center gap-3 px-4 py-2.5 bg-dark-surface hover:bg-slate-800 border border-dark-border rounded-xl transition-all duration-300 hover:border-[#3b82f6] hover:shadow-[0_0_15px_rgba(59,130,246,0.25)]">
+                        <i class="fa-brands fa-linkedin w-5 text-brand-DEFAULT group-hover:text-[#3b82f6] transition-colors"></i> 
+                        <span class="text-slate-300 group-hover:text-white transition-colors">LinkedIn</span>
+                    </a>
+                    <a href="https://dribbble.com/yeib" target="_blank" class="group flex items-center gap-3 px-4 py-2.5 bg-dark-surface hover:bg-slate-800 border border-dark-border rounded-xl transition-all duration-300 hover:border-[#ec4899] hover:shadow-[0_0_15px_rgba(236,72,153,0.25)]">
+                        <i class="fa-brands fa-dribbble w-5 text-brand-DEFAULT group-hover:text-[#ec4899] transition-colors"></i> 
+                        <span class="text-slate-300 group-hover:text-white transition-colors">Dribbble</span>
+                    </a>
+                    <a href="https://www.producthunt.com/@yeib" target="_blank" class="group flex items-center gap-3 px-4 py-2.5 bg-dark-surface hover:bg-slate-800 border border-dark-border rounded-xl transition-all duration-300 hover:border-[#f97316] hover:shadow-[0_0_15px_rgba(249,115,22,0.25)]">
+                        <i class="fa-brands fa-product-hunt w-5 text-brand-DEFAULT group-hover:text-[#f97316] transition-colors"></i> 
+                        <span class="text-slate-300 group-hover:text-white transition-colors">ProductHunt</span>
+                    </a>
+                    <a href="https://apps.microsoft.com/search/publisher?name=Yeib" target="_blank" class="group flex items-center gap-3 px-4 py-2.5 bg-brand-DEFAULT/10 hover:bg-brand-DEFAULT/20 border border-brand-DEFAULT/40 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(20,184,166,0.15)]">
+                        <i class="fa-brands fa-windows w-5 text-brand-light"></i> 
+                        <span class="text-brand-light font-medium group-hover:text-white transition-colors">Microsoft Store</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Two Column Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                
+                <!-- Main Content (Left, 2 cols wide) -->
+                <div class="lg:col-span-2 p-8 lg:border-r border-dark-border">
+                    <section class="mb-10">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-md bg-dark-surface border border-dark-border flex items-center justify-center text-brand-light">
+                                <i class="fa-solid fa-briefcase text-sm"></i>
+                            </div>
+                            <span x-text="data().experience.title"></span>
+                        </h3>
+                        
+                        <template x-for="exp in data().experience.items">
+                            <div class="mb-10 relative pl-8 border-l-2 border-dark-border" :class="exp.isCurrent ? '' : 'opacity-70 hover:opacity-100 transition-opacity duration-300'">
+                                <div class="absolute w-4 h-4 rounded-full -left-[9px]" :class="exp.isCurrent ? 'bg-dark-card border-2 border-brand-DEFAULT shadow-[0_0_12px_rgba(20,184,166,0.6)] top-1' : 'w-3 h-3 bg-slate-600 -left-[7px] top-1.5'"></div>
+                                <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
+                                    <h4 class="font-bold text-white" :class="exp.isCurrent ? 'text-xl' : 'text-lg'" x-text="exp.title"></h4>
+                                    <span class="text-xs font-mono mt-2 md:mt-0" :class="exp.isCurrent ? 'text-brand-light bg-brand-DEFAULT/10 px-2 py-1 rounded-md border border-brand-DEFAULT/20' : 'text-slate-500'" x-text="exp.date"></span>
+                                </div>
+                                <p class="text-sm font-medium mb-4 uppercase tracking-wider" :class="exp.isCurrent ? 'text-brand-dark' : 'text-slate-500'" x-text="exp.subtitle"></p>
+                                <ul class="list-disc list-outside ml-5 space-y-2 text-sm leading-relaxed" :class="exp.isCurrent ? 'text-slate-300 marker:text-brand-DEFAULT/60' : 'text-slate-400 marker:text-slate-600'">
+                                    <template x-for="bullet in exp.bullets">
+                                        <li x-html="bullet"></li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </template>
+                    </section>
+
+                    <section>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <template x-for="proj in data().projects.filter(p => !p.fullWidth)">
+                                <a :href="proj.link" target="_blank" class="block p-4 rounded-xl bg-dark-surface border border-dark-border hover:border-brand-DEFAULT/50 hover:bg-slate-800 transition-all group shadow-lg">
+                                    <h5 class="text-white font-bold mb-1 flex items-center gap-2 group-hover:text-brand-light transition-colors">
+                                        <i class="fa-solid text-brand-DEFAULT" :class="proj.icon"></i> <span x-text="proj.name"></span>
+                                    </h5>
+                                    <p class="text-xs text-slate-400" x-text="proj.desc"></p>
+                                </a>
+                            </template>
+                            <template x-for="proj in data().projects.filter(p => p.fullWidth)">
+                                <a :href="proj.link" target="_blank" class="block p-4 rounded-xl bg-dark-surface border border-dark-border hover:border-brand-DEFAULT/50 hover:bg-slate-800 transition-all group sm:col-span-2 shadow-lg">
+                                    <h5 class="text-white font-bold mb-1 flex items-center gap-2 group-hover:text-brand-light transition-colors">
+                                        <i class="fa-solid text-brand-DEFAULT" :class="proj.icon"></i> <span x-text="proj.name"></span>
+                                    </h5>
+                                    <p class="text-xs text-slate-400" x-text="proj.desc"></p>
+                                </a>
+                            </template>
+                        </div>
+                        
+                        <!-- Ecosystem -->
+                        <div class="mt-5 pt-5 border-t border-dark-border">
+                            <h5 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3" x-text="data().ecosystem.title"></h5>
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <template x-for="link in data().ecosystem.links">
+                                    <a :href="link.url" target="_blank" class="px-3 py-1.5 bg-dark-surface border border-dark-border hover:border-brand-DEFAULT/40 hover:text-brand-light rounded-lg transition-colors" x-text="link.name"></a>
+                                </template>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar (Right, 1 col wide) -->
+                <div class="p-8 bg-dark-bg/40">
+                    <section class="mb-10">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-md bg-dark-surface border border-dark-border flex items-center justify-center text-brand-light">
+                                <i class="fa-solid fa-layer-group text-sm"></i>
+                            </div>
+                            <span x-text="data().stack.title"></span>
+                        </h3>
+                        <div class="space-y-5">
+                            <template x-for="cat in data().stack.categories">
+                                <div class="p-4 rounded-xl bg-dark-surface border border-dark-border hover:border-brand-dark transition-colors">
+                                    <h4 class="text-xs font-bold text-brand-light uppercase tracking-widest mb-3 flex items-center gap-2">
+                                        <i class="fa-solid" :class="cat.icon"></i> <span x-text="cat.name"></span>
+                                    </h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <template x-for="item in cat.items">
+                                            <span class="px-2.5 py-1 bg-brand-DEFAULT/10 text-brand-light border border-brand-DEFAULT/30 rounded text-xs font-medium" x-text="item"></span>
+                                        </template>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="text-xl font-bold text-white flex items-center gap-3 mb-6">
+                            <div class="w-8 h-8 rounded-md bg-dark-surface border border-dark-border flex items-center justify-center text-brand-light">
+                                <i class="fa-solid fa-graduation-cap text-sm"></i>
+                            </div>
+                            <span x-text="data().education.title"></span>
+                        </h3>
+                        <ul class="space-y-4">
+                            <template x-for="edu in data().education.items">
+                                <li class="border-b border-dark-border pb-3 last:border-0 last:pb-0">
+                                    <h4 class="text-sm font-bold text-slate-200" x-text="edu.name"></h4>
+                                    <p class="text-xs text-brand-DEFAULT mt-0.5" x-text="edu.detail"></p>
+                                </li>
+                            </template>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="border-t border-dark-border bg-dark-surface/30 px-8 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500">
+                    <div class="flex flex-col items-center md:items-start gap-1">
+                        <p class="text-slate-500 text-[11px] font-bold uppercase tracking-widest">
+                            &copy; 2026 Yeib &bull; <span x-text="data().footer.copyright"></span>
+                        </p>
+                        <p class="text-slate-400 text-[10px] tracking-wider" x-text="data().footer.desc"></p>
+                    </div>
+                    
+                    <div class="flex items-center gap-3">
+                        <span class="text-slate-400 text-[11px] font-bold uppercase tracking-wider">By</span>
+                        <a href="https://yeib.cl" target="_blank" class="no-underline group relative transition-all duration-300 hover:-translate-y-0.5">
+                            <span class="yeib-signature text-3xl font-normal transition-all duration-500">
+                                yeib
+                            </span>
+                            <span class="absolute -bottom-1 left-0 w-0 h-px bg-[#2dd4bf] transition-all duration-500 group-hover:w-full shadow-[0_0_10px_#2dd4bf]"></span>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

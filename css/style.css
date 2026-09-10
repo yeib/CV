@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
+
+body { 
+    background-color: #020b12; 
+}
+
+/* Ambient floating orbs for Nebula effect */
+.orb-teal {
+    position: fixed;
+    top: -15%;
+    left: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.12) 0%, transparent 60%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(90px);
+    animation: floatTeal 15s ease-in-out infinite alternate;
+}
+
+.orb-purple {
+    position: fixed;
+    bottom: -20%;
+    right: -10%;
+    width: 70vw;
+    height: 70vw;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(100px);
+    animation: floatPurple 20s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatTeal {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(5%, 8%); }
+}
+@keyframes floatPurple {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-5%, -10%); }
+}
+
+/* UI Effects */
+.glass-panel {
+    background: rgba(8, 23, 32, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.glow-text {
+    text-shadow: 0 0 25px rgba(45, 212, 191, 0.5);
+}
+
+.logo-mask {
+    /* Smooth fade to fix rough edges */
+    -webkit-mask-image: radial-gradient(circle, black 55%, transparent 72%);
+    mask-image: radial-gradient(circle, black 55%, transparent 72%);
+}
+
+/* Footer Signature */
+.yeib-signature {
+    font-family: 'Luxurious Script', cursive;
+    color: #14b8a6;
+    display: inline-block;
+    transform: rotate(-2deg);
+    text-shadow: 0 0 12px rgba(20, 184, 166, 0.3);
+}
+
+.group:hover .yeib-signature {
+    transform: rotate(0deg) scale(1.1);
+    text-shadow: 0 0 15px rgba(45, 212, 191, 0.6);
+    color: #2dd4bf;
+}
