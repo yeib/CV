@@ -11,13 +11,13 @@ const cvData = {
                 name: "Indicadores",
                 icon: "fa-chart-line",
                 desc: "Monitoreo financiero en tiempo real, scraping diario y modelo de IA para predicciones.",
-                link: "https://indicadores.yeib.cl"
+                link: "https://indicadoresydatos.cl"
             },
             {
                 name: "InkIt",
                 icon: "fa-file-signature",
-                desc: "Editor de firma de PDFs open source. Frontend 100% JS (ES6+) con manejo de canvas y binarios.",
-                link: "https://github.com/yeib/InkIt"
+                desc: "Editor, visor y firma digital de PDFs 100% offline en Rust & Tauri v2. Disponible gratis en Microsoft Store.",
+                link: "https://apps.microsoft.com/detail/9ph8kk70mk9m"
             },
             {
                 name: "Freeblioteca",
@@ -50,7 +50,7 @@ const cvData = {
                     isCurrent: true,
                     bullets: [
                         'Arquitectura y despliegue de plataformas web con <strong class="text-white">ingesta continua de datos en tiempo real</strong> y arquitecturas de caché (Redis) para minimizar latencias.',
-                        'Desarrollo y publicación oficial en Microsoft Store de <strong class="text-white">8 aplicaciones nativas en Rust + Tauri v2</strong> (distribuidas en 240 mercados globales).',
+                        'Desarrollo y publicación oficial en Microsoft Store de <strong class="text-white">10 aplicaciones nativas en Rust + Tauri v2</strong> (distribuidas en 240 mercados globales).',
                         'Construcción de pipelines de web scraping masivo asíncronos (Puppeteer, Playwright), evasión anti-bots y persistencia en MySQL.',
                         'Implementación de arquitecturas Multi-Tenant e integración de modelos de <strong class="text-white">Inteligencia Artificial</strong> con fallback automático.'
                     ]
@@ -131,13 +131,13 @@ const cvData = {
                 name: "Indicadores",
                 icon: "fa-chart-line",
                 desc: "Real-time financial monitoring, daily scraping, and AI models for predictions.",
-                link: "https://indicadores.yeib.cl"
+                link: "https://indicadoresydatos.cl"
             },
             {
                 name: "InkIt",
                 icon: "fa-file-signature",
-                desc: "Open source PDF signature editor. 100% JS (ES6+) frontend with canvas and binary handling.",
-                link: "https://github.com/yeib/InkIt"
+                desc: "100% offline PDF editor, viewer, and digital signature tool in Rust & Tauri v2. Free on Microsoft Store.",
+                link: "https://apps.microsoft.com/detail/9ph8kk70mk9m"
             },
             {
                 name: "Freeblioteca",
@@ -170,7 +170,7 @@ const cvData = {
                     isCurrent: true,
                     bullets: [
                         'Architecture and deployment of web platforms with <strong class="text-white">continuous real-time data ingestion</strong> and cache architectures (Redis) to minimize latency.',
-                        'Development and official publication in Microsoft Store of <strong class="text-white">8 native applications in Rust + Tauri v2</strong> (distributed across 240 global markets).',
+                        'Development and official publication in Microsoft Store of <strong class="text-white">10 native applications in Rust + Tauri v2</strong> (distributed across 240 global markets).',
                         'Construction of massive asynchronous web scraping pipelines (Puppeteer, Playwright), anti-bot evasion, and MySQL persistence.',
                         'Implementation of Multi-Tenant architectures and integration of <strong class="text-white">Artificial Intelligence</strong> models with automatic fallback.'
                     ]
